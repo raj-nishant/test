@@ -1,13 +1,12 @@
-// import { BrowserRouter as Router, Route } from "react-router-dom";
-// import SignIn from "./components/SignIn";
-
 import "./App.css";
 
 import React from "react";
 import { Button, Checkbox, Form, Input } from "antd";
+
 const onFinish = (values) => {
   console.log("Success:", values);
 };
+
 const onFinishFailed = (errorInfo) => {
   console.log("Failed:", errorInfo);
 };
@@ -16,7 +15,7 @@ const App = () => {
   return (
     <div className="flex">
       <div className="w-1/2">
-        <img class="main-img" src="./sideImg.png" alt="side" />
+        <img className="main-img" src="./sideImg.png" alt="side" />
       </div>
 
       <div className="w-1/2 ">
@@ -24,7 +23,7 @@ const App = () => {
           <img src="./Group 22.png" alt="" />
         </div>
 
-        <div className="px-20 flex-col justify-center">
+        <div className="px-20 flex flex-col justify-center">
           <div className="flex justify-between mb-9 w-3/4">
             <h1 className="font-bold text-4xl">SignUp</h1>
             <p>
@@ -52,7 +51,6 @@ const App = () => {
               autoComplete="off"
             >
               <Form.Item
-                // label="Username"
                 name="username"
                 rules={[
                   {
@@ -65,7 +63,6 @@ const App = () => {
               </Form.Item>
 
               <Form.Item
-                // label="Password"
                 name="password"
                 rules={[
                   {
@@ -81,16 +78,14 @@ const App = () => {
               </Form.Item>
 
               <Form.Item
-                // label="Re-Enter Password"
-                name="password"
+                name="re-enter-password"
                 rules={[
                   {
                     required: true,
-                    message: "Please input your password!",
+                    message: "Please re-enter your password!",
                   },
                 ]}
               >
-                {/* <Input.Password /> */}
                 <Input
                   style={{ borderRadius: "135px" }}
                   placeholder="Re-Enter Password"
@@ -101,8 +96,8 @@ const App = () => {
                 name="remember"
                 valuePropName="checked"
                 wrapperCol={{
-                  offset: 8,
-                  span: 16,
+                  offset: 0,
+                  span: 24,
                 }}
               >
                 <Checkbox>Remember me</Checkbox>
@@ -110,14 +105,14 @@ const App = () => {
 
               <Form.Item
                 wrapperCol={{
-                  offset: 8,
+                  offset: 0,
                   span: 16,
                 }}
               >
                 <Button
                   type="primary"
                   htmlType="submit"
-                  className="bg-[#17B582] w-full m-0 float-start"
+                  className="bg-[#17B582] w-full"
                 >
                   Login
                 </Button>
