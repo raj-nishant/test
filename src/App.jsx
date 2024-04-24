@@ -24,10 +24,10 @@ const App = () => {
         </div>
 
         <div className="px-20 flex flex-col justify-center">
-          <div className="flex justify-between mb-9 w-3/4">
+          <div className="flex justify-between mb-9 w-2/3">
             <h1 className="font-bold text-4xl">SignUp</h1>
             <p>
-              Or <span className="text-[#17B582]">Sign</span>
+              Or <span className="text-[#17B582]">Sigin</span>
             </p>
           </div>
 
