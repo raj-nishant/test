@@ -18,110 +18,86 @@ const App = () => {
         <img className="main-img" src="./sideImg.png" alt="side" />
       </div>
 
-      <div className="w-1/2 ">
-        <div className="mb-56 mt-16 ml-5">
-          <img src="./Group 22.png" alt="" />
-        </div>
-
-        <div className="px-20 flex flex-col justify-center">
-          <div className="flex justify-between mb-9 w-2/3">
+      <div className="w-1/2 flex  justify-center">
+        <div className="w-full px-5">
+          <div className="mb-48 mt-16 ml-5">
+            <img src="./Group 22.png" alt="" />
+          </div>
+          <div className="flex justify-between mb-9 px-32">
             <h1 className="font-bold text-4xl">SignUp</h1>
             <p>
-              Or <span className="text-[#17B582]">Sigin</span>
+              Or <span className="text-[#17B582]">SignIn</span>
             </p>
           </div>
-
-          <div className="w-full">
-            <Form
-              name="basic"
-              labelCol={{
-                span: 8,
-              }}
-              wrapperCol={{
-                span: 16,
-              }}
-              style={{
-                maxWidth: 600,
-              }}
-              initialValues={{
-                remember: true,
-              }}
-              onFinish={onFinish}
-              onFinishFailed={onFinishFailed}
-              autoComplete="off"
+          <Form
+            name="basic"
+            initialValues={{
+              remember: true,
+            }}
+            onFinish={onFinish}
+            onFinishFailed={onFinishFailed}
+            autoComplete="off"
+            className="max-w-md mx-auto"
+          >
+            <Form.Item
+              name="username"
+              rules={[
+                {
+                  required: true,
+                  message: "Please input your username!",
+                },
+              ]}
             >
-              <Form.Item
-                name="username"
-                rules={[
-                  {
-                    required: true,
-                    message: "Please input your username!",
-                  },
-                ]}
-              >
-                <Input style={{ borderRadius: "135px" }} placeholder="email" />
-              </Form.Item>
+              <Input style={{ borderRadius: "135px" }} placeholder="Email" />
+            </Form.Item>
 
-              <Form.Item
-                name="password"
-                rules={[
-                  {
-                    required: true,
-                    message: "Please input your password!",
-                  },
-                ]}
-              >
-                <Input.Password
-                  style={{ borderRadius: "135px" }}
-                  placeholder="password"
-                />
-              </Form.Item>
+            <Form.Item
+              name="password"
+              rules={[
+                {
+                  required: true,
+                  message: "Please input your password!",
+                },
+              ]}
+            >
+              <Input.Password
+                style={{ borderRadius: "135px" }}
+                placeholder="Password"
+              />
+            </Form.Item>
 
-              <Form.Item
-                name="re-enter-password"
-                rules={[
-                  {
-                    required: true,
-                    message: "Please re-enter your password!",
-                  },
-                ]}
-              >
-                <Input
-                  style={{ borderRadius: "135px" }}
-                  placeholder="Re-Enter Password"
-                />
-              </Form.Item>
+            <Form.Item
+              name="re-enter-password"
+              rules={[
+                {
+                  required: true,
+                  message: "Please re-enter your password!",
+                },
+              ]}
+            >
+              <Input
+                style={{ borderRadius: "135px" }}
+                placeholder="Re-Enter Password"
+              />
+            </Form.Item>
 
-              <Form.Item
-                wrapperCol={{
-                  offset: 0,
-                  span: 24,
-                }}
-              >
-                <div>
-                  <Checkbox>Remember me</Checkbox>
-                  <a href="#" style={{ marginLeft: "170px" }}>
-                    Forgot password?
-                  </a>
-                </div>
-              </Form.Item>
+            <Form.Item>
+              <Checkbox>Remember me</Checkbox>
+              <a href="#" className="ml-20">
+                Forgot password?
+              </a>
+            </Form.Item>
 
-              <Form.Item
-                wrapperCol={{
-                  offset: 0,
-                  span: 16,
-                }}
+            <Form.Item>
+              <Button
+                type="primary"
+                htmlType="submit"
+                className="bg-[#17B582] w-full"
               >
-                <Button
-                  type="primary"
-                  htmlType="submit"
-                  className="bg-[#17B582] w-full"
-                >
-                  Login
-                </Button>
-              </Form.Item>
-            </Form>
-          </div>
+                Login
+              </Button>
+            </Form.Item>
+          </Form>
         </div>
       </div>
     </div>
