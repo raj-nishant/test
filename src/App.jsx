@@ -93,14 +93,17 @@ const App = () => {
               </Form.Item>
 
               <Form.Item
-                name="remember"
-                valuePropName="checked"
                 wrapperCol={{
                   offset: 0,
                   span: 24,
                 }}
               >
-                <Checkbox>Remember me</Checkbox>
+                <div>
+                  <Checkbox>Remember me</Checkbox>
+                  <a href="#" style={{ marginLeft: "170px" }}>
+                    Forgot password?
+                  </a>
+                </div>
               </Form.Item>
 
               <Form.Item
