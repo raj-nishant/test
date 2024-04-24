@@ -13,7 +13,7 @@ const onFinishFailed = (errorInfo) => {
 
 const App = () => {
   return (
-    <div className="flex">
+    <div className="flex flex-wrap">
       <div className="w-1/2">
         <img className="main-img" src="./sideImg.png" alt="side" />
       </div>
